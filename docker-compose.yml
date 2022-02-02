@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+    php-apache:
+        container_name: universities-php
+        build:
+            context: ./code
+            dockerfile: Dockerfile
+        depends_on:
+            - universitiesdb
+        volumes:
+            - ./code:/var/www/html/
+        ports:
+            - 1114:80
+    universitiesdb:
+        container_name: universitiesdb
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: universities
+        ports:
+            - "9906:3306"
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - '1115:80'
+        restart: always
+        environment:
+            PMA_HOST: universitiesdb
+        depends_on:
+            - universitiesdb

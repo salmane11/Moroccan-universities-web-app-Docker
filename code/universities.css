@@ -1,0 +1,53 @@
+body{
+    background-color: #222831;
+    color:#EEEEEE;
+    text-align: center;
+    justify-content: center;
+}
+.header{
+    position: absolute;
+    top:0;
+    left:0;
+    height:12%;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    background-color:#00ADB5;
+}
+.card{
+    position:absolute;
+    top:35%;
+    left:15%;
+    width:70%;
+    background-color: #393E46;
+    border-radius: 15px;
+}
+.university{
+    width: 90%;
+    margin: 10px 5% 10px 5%;
+    background-color:#EEEEEE;
+    border-radius: 15px;
+    color: black;
+    display:flex;
+    justify-content: space-around;
+}
+.university img{
+    width: 150px;
+    height:90px;
+    border-radius: 10px;
+}
+.university h3{
+    color: #00ADB5;
+    font-size: 20px;
+}
+.university p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#393E46;
+    font-size: 15px;
+}
+input{
+    border-radius: 5px;
+}
+button{
+    border-radius: 5px;
+}
